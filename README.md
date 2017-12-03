@@ -5,7 +5,20 @@ API para envio de mensagens SMS usando a solução da empresa FacilitaMóvel (ht
 
 # Utilização
 
-(Work In Progress) ...
+```php
+<?php
+
+require_once 'facilitamovelsms.php';
+
+$username = 'your_username';
+$password = 'your_password';
+
+$destinatario = '64981251142'; // telefone do destinatario incluindo o DDD
+$mensagem = 'Mensagem a ser enviada para o destinatario';
+
+$facilita = new FacilitaMovelSms($username, $password);
+$facilita->send_sms($destinatario, $mensagem);
+```
 
 # Licença
 
